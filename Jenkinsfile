@@ -44,7 +44,7 @@ pipeline {
       }
     }
     // DO NOT uncomment until 06_04 Lab
-    /*
+    
     stage('DT Deploy Event') {
       steps {
         container("curl") {
@@ -54,14 +54,15 @@ pipeline {
               tagRule : tagMatchRules,
               customProperties : [
                 [key: 'Jenkins Build Number', value: "${env.BUILD_ID}"],
-                [key: 'Git commit', value: "${env.GIT_COMMIT}"]
+                [key: 'Git commit', value: "${env.GIT_COMMIT}"],
+                [key: 'PDP User', value: "Michael Polter"]
               ]
             )
           }
         }
       }
     }
-    */
+    
     
     // DO NOT uncomment until 10_01 Lab
     /*
